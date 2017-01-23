@@ -1,4 +1,9 @@
 # MvcCore Extension - Apache DPI Request
+
+[![Latest Stable Version](https://img.shields.io/badge/Stable-v3.1.0-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-helloworld/releases)
+[![License](https://img.shields.io/badge/Licence-BSD-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-helloworld/blob/master/LICENCE.md)
+![PHP Version](https://img.shields.io/badge/PHP->=5.3-brightgreen.svg?style=plastic)
+
 MvcCore_Request extension - request BasePath property correction for applications using [**Apache .htaccess [DPI] flag**](https://httpd.apache.org/docs/trunk/rewrite/flags.html#flag_dpi).
 
 ## Installation
