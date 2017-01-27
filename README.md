@@ -1,14 +1,14 @@
-# MvcCore Extension - Apache DPI Request
+# MvcCore Extension - Request - Apache DPI
 
-[![Latest Stable Version](https://img.shields.io/badge/Stable-v3.1.0-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-helloworld/releases)
-[![License](https://img.shields.io/badge/Licence-BSD-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-helloworld/blob/master/LICENCE.md)
+[![Latest Stable Version](https://img.shields.io/badge/Stable-v4.0.0-brightgreen.svg?style=plastic)](https://github.com/mvccore/ext-request-apachedpi/releases)
+[![License](https://img.shields.io/badge/Licence-BSD-brightgreen.svg?style=plastic)](https://mvccore.github.io/docs/mvccore/4.0.0/LICENCE.md)
 ![PHP Version](https://img.shields.io/badge/PHP->=5.3-brightgreen.svg?style=plastic)
 
-MvcCore_Request extension - request BasePath property correction for applications using [**Apache .htaccess [DPI] flag**](https://httpd.apache.org/docs/trunk/rewrite/flags.html#flag_dpi).
+MvcCore Request extension to correct request BasePath property  - for applications using [**Apache .htaccess [DPI] flag**](https://httpd.apache.org/docs/trunk/rewrite/flags.html#flag_dpi).
 
 ## Installation
 ```shell
-composer require mvccore/ext-apachedpi
+composer require mvccore/ext-request-apachedpi
 ```
 
 ## Usage
@@ -52,5 +52,5 @@ Options -Indexes
 ### PHP application Bootstrap.php
 Put this patching code in very beginning of your application:
 ```php
-MvcCore::GetInstance()->SetRequestClass(MvcCoreExt_ApacheDpi::class);
+\MvcCore::GetInstance()->SetRequestClass(\MvcCore\Ext\Request\ApacheDpi::class);
 ```

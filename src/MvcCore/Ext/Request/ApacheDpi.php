@@ -8,11 +8,19 @@
  * the LICENSE.md file that are distributed with this source code.
  *
  * @copyright	Copyright (c) 2016 Tom Flídr (https://github.com/mvccore/mvccore)
- * @license		https://mvccore.github.io/docs/mvccore/3.0.0/LICENCE.md
+ * @license		https://mvccore.github.io/docs/mvccore/4.0.0/LICENCE.md
  */
 
-class MvcCoreExt_ApacheDpi extends MvcCore_Request
+namespace MvcCore\Ext\Request;
+
+class ApacheDpi extends \MvcCore\Request
 {
+	/**
+	 * MvcCore Extension - Request ApacheDpi - version:
+	 * Comparation by PHP function version_compare();
+	 * @see http://php.net/manual/en/function.version-compare.php
+	 */
+	const VERSION = '4.0.0';
 	/**
 	 * If there is used somewhere in .htaccess files structure any [DPI] flag
 	 * end request is dispatched to another .htaccess with "discard path",
