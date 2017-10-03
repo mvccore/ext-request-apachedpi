@@ -22,6 +22,7 @@ Options -Indexes
 # mod_rewrite
 <IfModule mod_rewrite.c>
 	RewriteEngine On
+	RewriteRule .* - [E=REDIRECT_PATH:]
 	# If directory with HTTP_HOST name exists in domains directory, 
 	# dispatch request into this webhosting directory with requested application:
 	RewriteCond %{HTTP_HOST} ^(.*)$
@@ -37,7 +38,6 @@ Options -Indexes
 # mod_rewrite
 <IfModule mod_rewrite.c>
 	RewriteEngine On
-	RewriteRule .* - [E=REDIRECT_PATH:]
 	# forbid the direct access to app directories (eg. config-files, ...)
 	RewriteRule ^App/.*$ / [F,L]
 	RewriteRule ^vendor/.*$ / [F,L]
