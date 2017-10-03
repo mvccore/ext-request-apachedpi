@@ -26,7 +26,7 @@ Options -Indexes
 	# dispatch request into this webhosting directory with requested application:
 	RewriteCond %{HTTP_HOST} ^(.*)$
 	RewriteCond %{DOCUMENT_ROOT}/domains/%1 -d
-	RewriteRule (.*) domains/%1/$1 [DPI,L]
+	RewriteRule (.*) domains/%1/$1 [DPI,QSA,E=REDIRECT_PATH:/domains/%1,L]
 </IfModule>
 ```
 
@@ -37,6 +37,7 @@ Options -Indexes
 # mod_rewrite
 <IfModule mod_rewrite.c>
 	RewriteEngine On
+	RewriteRule .* - [E=REDIRECT_PATH:]
 	# forbid the direct access to app directories (eg. config-files, ...)
 	RewriteRule ^App/.*$ / [F,L]
 	RewriteRule ^vendor/.*$ / [F,L]
