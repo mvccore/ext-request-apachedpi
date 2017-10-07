@@ -1,6 +1,6 @@
 # MvcCore Extension - Request - Apache DPI
 
-[![Latest Stable Version](https://img.shields.io/badge/Stable-v4.1.0-brightgreen.svg?style=plastic)](https://github.com/mvccore/ext-request-apachedpi/releases)
+[![Latest Stable Version](https://img.shields.io/badge/Stable-v4.2.0-brightgreen.svg?style=plastic)](https://github.com/mvccore/ext-request-apachedpi/releases)
 [![License](https://img.shields.io/badge/Licence-BSD-brightgreen.svg?style=plastic)](https://mvccore.github.io/docs/mvccore/4.0.0/LICENCE.md)
 ![PHP Version](https://img.shields.io/badge/PHP->=5.3-brightgreen.svg?style=plastic)
 
@@ -22,11 +22,12 @@ Options -Indexes
 # mod_rewrite
 <IfModule mod_rewrite.c>
 	RewriteEngine On
+	RewriteRule .* - [E=REDIRECT_PATH:]
 	# If directory with HTTP_HOST name exists in domains directory, 
 	# dispatch request into this webhosting directory with requested application:
 	RewriteCond %{HTTP_HOST} ^(.*)$
 	RewriteCond %{DOCUMENT_ROOT}/domains/%1 -d
-	RewriteRule (.*) domains/%1/$1 [DPI,L]
+	RewriteRule (.*) domains/%1/$1 [DPI,QSA,E=REDIRECT_PATH:/domains/%1,L]
 </IfModule>
 ```
 
