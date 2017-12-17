@@ -4,7 +4,7 @@
  * MvcCore
  *
  * This source file is subject to the BSD 3 License
- * For the full copyright and license information, please view 
+ * For the full copyright and license information, please view
  * the LICENSE.md file that are distributed with this source code.
  *
  * @copyright	Copyright (c) 2016 Tom Flídr (https://github.com/mvccore/mvccore)
@@ -20,7 +20,7 @@ class ApacheDpi extends \MvcCore\Request
 	 * Comparation by PHP function version_compare();
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
-	const VERSION = '4.2.0';
+	const VERSION = '4.3.1';
 	/**
 	 * If there is used somewhere in .htaccess files structure any [DPI] flag
 	 * end request is dispatched to another .htaccess with "discard path",
