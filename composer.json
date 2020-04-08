@@ -1,7 +1,7 @@
 {
 	"name": "mvccore/ext-request-apachedpi",
 	"type": "library",
-	"description": "MvcCore Extension - Request - Apache DPI - request BasePath property correction for applications using Apache .htaccess [DPI] flag.",
+	"description": "MvcCore - Extension - Request - Apache DPI - request BasePath property correction for applications using Apache .htaccess [DPI] flag.",
 	"keywords": [
 		"mvc", 
 		"mvccore", 
